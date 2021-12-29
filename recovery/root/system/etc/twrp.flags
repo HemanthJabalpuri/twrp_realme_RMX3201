@@ -1,0 +1,11 @@
+# mount point    fstype    device                       device2               flags
+/recovery        emmc      /dev/block/platform/bootdevice/by-name/recovery
+/boot            emmc      /dev/block/platform/bootdevice/by-name/boot
+/cache           ext4      /dev/block/platform/bootdevice/by-name/cache
+/vbmeta          emmc      /dev/block/platform/bootdevice/by-name/vbmeta      flags=backup;flashimg
+/persist         ext4      /dev/block/platform/bootdevice/by-name/persist
+/metadata        ext4      /dev/block/platform/bootdevice/by-name/md_udc
+
+# Removable storage
+/external_sd     auto      /dev/block/mmcblk1p1         /dev/block/mmcblk1
+/usb-otg         auto      /dev/block/sda1              /dev/block/sda        flags=storage;wipeingui;removable
