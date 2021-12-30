@@ -6,7 +6,6 @@
         manifest_radioconfig.xml
         manifest_em.xml
         manifest_bgservice.xml
-        manifest_op_dsds.xml
         manifest_wifi.xml
         manifest_videotelephony.xml
         manifest_km4.xml
@@ -18,8 +17,6 @@
         manifest_pq.xml
         manifest_mmservice.xml
         manifest_gnss.xml
-        manifest_oppo_nfc.xml
-        manifest.xml
         manifest.xml
 -->
 <manifest version="1.0" type="device" target-level="4">
@@ -269,6 +266,12 @@
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ISecureElement/SIM1</fqname>
+        <fqname>@1.0::ISecureElement/SIM2</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -339,36 +342,6 @@
         <fqname>@1.2::ISupplicant/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>interfaces.factoryAta</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFactoryAta</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFactoryAta/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>interfaces.factoryInterface</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFactoryInterface</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFactoryInterface/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.egistec.hardware.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>IBiometricsFingerprintRbs</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -387,6 +360,16 @@
             <instance>internal/0</instance>
         </interface>
         <fqname>@1.1::IBGService/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.camdump</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICamDump</name>
+            <instance>internal/0</instance>
+        </interface>
+        <fqname>@1.0::ICamDump/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.ccap</name>
@@ -604,22 +587,6 @@
         <fqname>@2.3::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.radio_op</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IRadioOp</name>
-            <instance>OpImsRILd1</instance>
-            <instance>OpImsRILd2</instance>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <fqname>@2.0::IRadioOp/OpImsRILd1</fqname>
-        <fqname>@2.0::IRadioOp/OpImsRILd2</fqname>
-        <fqname>@2.0::IRadioOp/slot1</fqname>
-        <fqname>@2.0::IRadioOp/slot2</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -740,16 +707,6 @@
         <fqname>@1.0::IKtv/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOppoNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOppoNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.hardware.oiface</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -778,6 +735,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISoter/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.silead.hardware.fingerprintext</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISileadFingerprint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISileadFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.trustonic.tee</name>

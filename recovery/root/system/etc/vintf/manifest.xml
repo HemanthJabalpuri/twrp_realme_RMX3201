@@ -109,16 +109,6 @@
         <version>1.0</version>
     </hal>
     <hal format="hidl">
-        <name>vendor.egistec.hardware.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>IBiometricsFingerprintRbs</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@4.0::IBiometricsFingerprintRbs/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.oppo.engnative.engineer</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -147,16 +137,6 @@
             <instance>commondcsservice</instance>
         </interface>
         <fqname>@1.0::ICommonDcsHalService/commondcsservice</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.silead.hardware.fingerprintext</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISileadFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISileadFingerprint/default</fqname>
     </hal>
     <vendor-ndk>
         <version>29</version>
